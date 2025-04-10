@@ -1,0 +1,52 @@
+/* Basics */
+body {
+    background-color: #222222;
+    font-family: "Comic Sans MS"
+}
+
+a {
+    color: #ccc;
+    text-decoration: underline;
+}
+
+p {
+    color: #ccc;
+}
+
+/* Navbar */
+.topnav {
+    overflow: hidden;
+    background-color: #363636;
+    border-radius: 5px;
+}
+
+.topnav #active {
+    background-color: #505050;
+}
+
+.topnav #active:hover {
+    background-color: #555555;
+}
+
+.topnav p {
+    float: left;
+    text-align: center;
+    font-size: 28px;
+    width: 10%;
+    margin-top: 0.5%;
+    margin-bottom: 0%;
+}
+
+.topnav a {
+    float: right;
+    text-align: center;
+    text-decoration: none;
+    padding: 16px;
+    font-size: 20px;
+    width: 10%;
+    background-color: #424242;
+}
+
+.topnav a:hover {
+    background-color: #464646
+}

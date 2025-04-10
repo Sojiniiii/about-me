@@ -1,33 +1,46 @@
 /* Basics */
 body {
+    margin: 0;
+    padding: 0;
     background-color: #222222;
     font-family: "Comic Sans MS"
 }
 
 a {
-    color: #ccc;
+    color: #ffffff;
     text-decoration: underline;
 }
 
 p {
-    color: #ccc;
+    color: #ffffff;
 }
 
 /* Navbar */
 .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url("https://upload.wikimedia.org/wikipedia/en/2/27/Bliss_%28Windows_XP%29.png");
-    min-height: 400%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
-    
+    z-index: -1;
 }
 
 .topnav {
     overflow: hidden;
+    position: absolute;
+    top: -10%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 80%;
     background-color: #363636;
     border-radius: 5px;
+    animation: appear 0.6s ease-out forwards;
+    z-index: 1;
 }
 
 .topnav #active {
@@ -38,17 +51,8 @@ p {
     background-color: #555555;
 }
 
-.topnav p {
-    float: left;
-    text-align: center;
-    font-size: 28px;
-    width: 10%;
-    margin-top: 0.5%;
-    margin-bottom: 0%;
-}
-
 .topnav a {
-    float: right;
+    float: left;
     text-align: center;
     text-decoration: none;
     padding: 16px;
@@ -59,4 +63,53 @@ p {
 
 .topnav a:hover {
     background-color: #464646
+}
+
+@keyframes appear {
+    0% {
+        top: -10%;
+        opacity: 0;
+    }
+    100% {
+        top: 3%;
+        opacity: 1;
+    }
+}
+/* Content */
+.content {
+    position: relative;
+    margin-top: 100vh;
+    color: white;
+    font-size: 12px;
+    padding: 20px;
+}
+
+.content h1 {
+    font-size: 35px;
+    margin-left: 5%;
+}
+
+.content p {
+    font-size: 16px;
+    margin-left: 5%;
+    max-width: 800px;
+    text-align: left;
+}
+
+#aboutme #cool {
+    font-weight: bold;
+    background: linear-gradient(to right, #f0c3f7, #d58ae8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+#aboutme hr {
+    border: none;
+    height: 3px;
+    background: linear-gradient(to right, #d8b4ff, #a084ca);
+    margin: 20px auto;
+    width: 95%;
+    display: block;
 }
